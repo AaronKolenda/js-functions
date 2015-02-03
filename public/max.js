@@ -16,6 +16,8 @@ function max(a, b) {
   You should make use of the max() function you just wrote.
 */
 
+/* This is the first function I wrote before I read the directions
+
 function maxOfThree(a, b, c) {
 
 	var max;
@@ -32,4 +34,18 @@ function maxOfThree(a, b, c) {
  	return max;
 
 }
+ */ 
+
+function maxOfThree(a, b, c) {
+
+var realMax = max(a, b);
+var realMax = max(realMax, c);
+
+return realMax;
+
+}
+
+
+ 
+
 
