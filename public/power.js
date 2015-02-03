@@ -15,6 +15,10 @@ function multiply(a, b) {
 */
 
 function power(base, exponent) {
-	return Math.pow(base, exponent);
+	var newBase = 1;
+	for (i=0; i < exponent; i++) {
+		newBase = (multiply(base, newBase));
+	}
+	return newBase;
 }
 
