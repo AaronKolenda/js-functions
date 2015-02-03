@@ -8,7 +8,25 @@
 */
 
 function isVowel(letter) {
+	/*var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+	 "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
+		for (i=0; i < alphabet.length; i++) {
+			if ( letter.toLowerCase() === alphabet[0]  || letter.toLowerCase() ===  alphabet[4] 
+				|| letter.toLowerCase() ===  alphabet[8] || 
+				alphabet[i] ===  alphabet[i] || alphabet[i] === alphabet[i] ) {
+				return true;
+			}
+				return false;
+		}
+*/
+
+
+	if (letter.toLowerCase() === "a" || letter.toLowerCase() === "e" || letter.toLowerCase() === "i" 
+		|| letter.toLowerCase() === "o" || letter.toLowerCase() === "u") {
+		return true;
+	}
+	return false;
 }
 
 /*
@@ -20,5 +38,15 @@ function isVowel(letter) {
 */
 
 function countVowels(word) {
+	var vowelcount = 0;  
+	word = word.toLowerCase(); // The Iron Yard
+
+	for (i=0; i < word.length; i++) {
+		if (word.charAt(i) === "a" || word.charAt(i) === "e" || word.charAt(i) === "i" 
+		|| word.charAt(i) === "o" || word.charAt(i) === "u") {
+		vowelcount++;
+		}
+	}
+	return vowelcount;
 
 }
